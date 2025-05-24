@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <errno.h>
 
-#include "../types.h"
-#include "../util.h"
-#include "../io.h"
+#include "../include/types.h"
+#include "../include/util.h"
+#include "../include/io.h"
 
 // 20 mib, can probably change this to a higher value without issue
 #define IO_READ_CHUNK_SIZE 2097152

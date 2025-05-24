@@ -4,7 +4,7 @@
 #define SDL_MAIN_HANDLED
 #include <SDL2/SDL.h>
 
-#include "engine/global.h"
+#include "../include/global.h"
 
 int main(int argc, char *argv[]) {
     render_init();

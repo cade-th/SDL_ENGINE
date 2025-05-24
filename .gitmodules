@@ -1,0 +1,3 @@
+[submodule "lib/utils_c"]
+	path = lib/utils_c
+	url = https://github.com/cade-th/utils_c

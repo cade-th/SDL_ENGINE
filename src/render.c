@@ -1,9 +1,9 @@
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
 
-#include "../global.h"
-#include "render.h"
-#include "render_internal.h"
+#include "../include/global.h"
+#include "../include/render.h"
+#include "../include/render_internal.h"
 
 static Render_State_Internal state = {0};
 

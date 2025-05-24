@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <GL/glew.h>
-#include "../util.h"
-#include "../io.h"
-#include "render_internal.h"
+#include "../include/util.h"
+#include "../include/io.h"
+#include "../include/render_internal.h"
 
 u32 render_shader_create(const char *path_vert, const char *path_frag) {
     int success;
