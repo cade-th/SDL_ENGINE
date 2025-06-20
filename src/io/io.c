@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <errno.h>
 
-#include "../include/types.h"
-#include "../include/util.h"
-#include "../include/io.h"
+#include "../util/types.h"
+#include "../util/util.h"
+#include "../io/io.h"
 
 // 20 mib, can probably change this to a higher value without issue
 #define IO_READ_CHUNK_SIZE 2097152
@@ -15,7 +15,8 @@ File io_file_read(const char *path) {
     File file = { .is_valid = false };
     FILE *fp = fopen(path, "rb");
     if (ferror(fp)) {
-        ERROR_RETURN(file, IO_READ_ERROR_GENERAL, path, errno);
+        //ERROR_RETURN(file, IO_READ_ERROR_GENERAL, path, errno);
+        printf("something wrong with file io\n");
     }
     char *data = NULL;
     char *tmp;
@@ -43,7 +44,8 @@ File io_file_read(const char *path) {
     }
     if (ferror(fp)) {
         free(data);
-        ERROR_RETURN(file, IO_READ_ERROR_GENERAL, path, errno);
+        // ERROR_RETURN(file, IO_READ_ERROR_GENERAL, path, errno);
+        printf("something wrong with file io\n");
     }
     tmp = realloc(data, used + 1);
     if (!tmp) {
@@ -59,3 +61,5 @@ File io_file_read(const char *path) {
 }
 
 int io_file_write(void *buffer, size_t size, const char *path);
+
+

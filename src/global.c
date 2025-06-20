@@ -1,3 +1,3 @@
-#include "../include/global.h"
+#include "global.h"
 
 Global global = { 0 };
