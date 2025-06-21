@@ -34,13 +34,8 @@ int main(){
         }
 
         input_update();
-
-        if (global.input.w == KS_PRESSED) {
-            printf("w\n");
-        }
-
+            
         render_begin();
-
         vec3 position = {0.0f, 0.0f, 0.0f};
         vec3 size = {1.0f, 1.0f, 1.0f};
         vec3 rotation = {global.time.now / 1000.0f, 0.0f, 0.0f}; // Rotates over time
@@ -48,6 +43,7 @@ int main(){
         vec4 color = {1.0f, 0.5f, 0.2f, 1.0f};
         render_quad(position, size, rotation, color);
         render_end(window);
+
         time_update_late();
     }
 
