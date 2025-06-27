@@ -5,15 +5,18 @@
 #include "render_internal.h"
 #include "../global.h"
 
+#define GAME_WIDTH 1000;
+#define GAME_HEIGHT 1000;
+
 static u32 vao_quad;
 static u32 vbo_quad;
 static u32 ebo_quad;
 static u32 shader_default;
 static u32 texture_color;
-static f32 window_width = 800;
-static f32 window_height = 600;
-static f32 render_width = 800;
-static f32 render_height = 600;
+static f32 window_width = GAME_WIDTH;
+static f32 window_height = GAME_HEIGHT;
+static f32 render_width = GAME_WIDTH;
+static f32 render_height = GAME_HEIGHT;
 
 static void camera_init() {
     global.camera.fov = 45.0f * (3.14159 / 180.0f);

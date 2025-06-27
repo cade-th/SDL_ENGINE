@@ -42,6 +42,8 @@ int main(){
         // vec3 rotation = {0.0f, 0.0f, 0.0f}; // Rotates over time
         vec4 color = {1.0f, 0.5f, 0.2f, 1.0f};
         render_quad(position, size, rotation, color);
+        vec3 new_position = {5.0f, 5.0f, 5.0f};
+        render_quad(new_position, size, rotation, color);
         render_end(window);
 
         time_update_late();
